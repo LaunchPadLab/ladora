@@ -1,0 +1,52 @@
+[class*=-container]{
+  @include base-padding;
+  @include outer-container;
+}
+
+
+nav{
+	span{
+		color: $white-base;
+		@include s-base;
+	}
+}
+
+.use-container{
+	ul{
+		li{
+			i{
+				background-color: $white-base;
+				display: inline-block;
+				@include rem(margin-right, 20px);
+				width: 130px;
+			}
+
+			.text-block{
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.options-wrapper{
+	background-color: #04004E;
+
+	.options{
+		.option{
+			text-align: center;
+
+			@include media($tablet){
+				@include span-columns(6 of 12);
+			}
+
+			h3, p{
+				color: $white-base;
+			}
+		}
+	}
+}
+
+footer{
+	@include rem(padding, 10px 20px);
+	text-align: center;
+}
