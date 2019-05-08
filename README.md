@@ -1,4 +1,4 @@
-# PrepMedians
+# Product "Ladora"
 
 ## Run Server
 ```bundle exec middleman server```
