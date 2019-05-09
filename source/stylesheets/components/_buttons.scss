@@ -3,18 +3,15 @@
 
 // Main Button
 @mixin button{
-  border-radius: 2px;
   display: inline-block;
   @include font-type($primary-sans-serif, normal, $bold);
   @include rem(margin, 5px 0 1px);
   @include rem(padding, 12px 12px);
-  @include s-small;
+  @include s-base;
   @include transition (all 0.3s ease-in-out);
-  letter-spacing: 1px;
   line-height: normal;
   min-width: 180px;
   text-align: center;
-  text-transform: uppercase;
 
   text{
     align: center;
@@ -26,7 +23,6 @@
 
   &:focus{
     border: none;
-    outline: none;
     text-decoration: none;
   }
 }

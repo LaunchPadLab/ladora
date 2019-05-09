@@ -28,24 +28,25 @@ h6 {
   color: $black-base;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: 1px;
   line-height: 1.1;
-
-  @include media($tablet){ letter-spacing: 2px; font-weight: $light; }
 }
 
 h1 { font-size: $font-size-base * 1.75; @include media($tablet){ font-size: $font-size-base * 4; } }
 h2 { font-size: $font-size-base * 1.50; @include media($tablet){ font-size: $font-size-base * 2.75; } }
-h3 { font-size: $font-size-base * 1.45; @include media($tablet){ font-size: $font-size-base * 2.50; } }
-h4 { font-size: $font-size-base * 1.25; @include media($tablet){ font-size: $font-size-base * 1.75; } }
+h3 { font-size: $font-size-base * 1.45; @include media($tablet){ font-size: $font-size-base * 1.50; } }
+h4 { font-size: $font-size-base * 1.25; @include media($tablet){ font-size: $font-size-base * 1.50; } }
 h5 { font-size: $font-size-base * 1.00; @include media($tablet){ font-size: $font-size-base * 1.25; } }
 h6 { font-size: $font-size-base - 2.00; @include media($tablet){ font-size: $font-size-base * 1.00; } }
+
+h3{
+  font-weight: bold;
+}
 
 p {
   font-weight: normal;
   font-style: normal;
   @include font-type($primary-sans-serif, normal, normal);
-  @include s-small;
+  @include s-base;
   @include rem(margin-bottom, 12px);
   line-height: $base-line-height;
   color: $black-base;

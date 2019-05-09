@@ -7,22 +7,96 @@
 nav{
 	span{
 		color: $white-base;
-		@include s-base;
+		@include s-bigger;
+	}
+	@include rem(margin-bottom, 40px);
+}
+
+.section-header{
+	text-align: center;
+}
+
+i{
+	background-color: $white-base;
+	border-radius: 10px;
+	box-shadow: 0 0 11px 0 rgba(190,190,190,0.50);
+	display: inline-block;
+	height: 130px;
+	width: 130px;
+}
+
+.how-it-works-container{
+
+	ul{
+		counter-reset: section;
+	}
+
+	li{
+		@include rem(margin-top, 30px);
+		position: relative;
+
+		&:before{
+			counter-increment: section;
+			content: counter(section);
+			background-color: $green-base;
+			color: $white-base;
+			@include position(absolute, 110px null null null);
+			@include horizontal-center;
+			display: block;
+			height: 40px;
+			width: 40px;
+			border-radius: 20em;
+			font-weight: bold;
+			@include s-medium;
+			line-height: 2.2;
+		}
+
+		&:after{
+			@include media($tablet){
+				border: 1px dashed $green-base;
+				content: "";
+				display: block;
+				@include position(absolute, 65px null null null);
+				left: 50%;
+				width: 100%;
+				z-index: -1;
+			}
+		}
+
+		&:last-child:after{
+			display: none;
+		}
+
+		@include media($tablet){
+			@include span-columns(4 of 12);
+		}
+
+		i{
+			@include rem(margin-bottom, 30px);
+		}
 	}
 }
 
 .use-container{
+	border-top: 1px solid $white-med;
+
 	ul{
+		@include center;
+		max-width: 600px;
+
 		li{
+			display: block;
+			@include rem(margin-top, 30px);
+
 			i{
-				background-color: $white-base;
-				display: inline-block;
 				@include rem(margin-right, 20px);
-				width: 130px;
+				vertical-align: middle;
 			}
 
 			.text-block{
 				display: inline-block;
+				width: calc(100% - 160px);
+				vertical-align: middle;
 			}
 		}
 	}
@@ -31,8 +105,51 @@ nav{
 .options-wrapper{
 	background-color: #04004E;
 
+	h2{
+		color: $white-base;
+	}
+
+	.options-container{
+		max-width: 85em;
+	}
+
 	.options{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+
+
+		@include media($tablet){
+			&:before{
+				background-color: $white-base;
+				content: "";
+				display: inline-block;
+				height: calc(100% - 30px);
+				@include rem(margin-top, 30px);
+				@include vertical-horizontal-center;
+				width: 1px;
+			}
+
+			&:after{
+				background-color: $secondary-base;
+				border: 1px solid $white-base;
+				border-radius: 20em;
+				content: "or";
+				color: $white-base;
+				display: block;
+				height: 50px;
+				@include rem(margin-top, 30px);
+				@include vertical-horizontal-center;
+				line-height: 3;
+				text-align: center;
+				width: 50px;
+			}
+		}
+
+
 		.option{
+			@include rem(margin-top, 30px);
+			@include rem(padding, 0px 10px);
 			text-align: center;
 
 			@include media($tablet){
@@ -41,6 +158,16 @@ nav{
 
 			h3, p{
 				color: $white-base;
+			}
+
+			p{
+				@include center;
+				max-width: 450px;
+			}
+
+			img{
+				@include rem(margin-bottom, 10px);
+				width: 80px;
 			}
 		}
 	}
