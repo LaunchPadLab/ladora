@@ -35,9 +35,10 @@
 			@include rem(padding, 40px 20px);
 
 			li{
-				&:not(:first-child){
-					@include rem(margin-top, 20px);
-				}
+				// &:not(:first-child){
+				@include rem(margin-top, 20px);
+				@include rem(padding-right, 20px);
+				// }
 
 				@include media($tablet){
 					@include span-columns(4 of 12);

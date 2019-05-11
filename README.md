@@ -1,7 +1,7 @@
 # 39A Product: "Ladora"
 
 ## Run Server
-```bundle exec middleman server```
+`bundle exec middleman server`
 
 ## Deploy Changes
 1. Merge any changes to Master

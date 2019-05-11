@@ -83,6 +83,9 @@ i{
 	ul{
 		@include center;
 		max-width: 600px;
+		// columns: 2;
+  	// -webkit-columns: 2;
+  	// -moz-columns: 2;
 
 		li{
 			display: block;
